@@ -7,17 +7,14 @@
 <body>
 &nbsp;
 <script>
-function isSmartPhone() {
-  if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-    return true;
+function isSmartPhone(){
+  if (navigator.userAgent.match(/iPhone|Android.+Mobile/)){
+    return alert("メニューを開くには左上の三本線をタップしてください");
   } else {
-    return false;
+    return alert("PC");
   }
-  isSmartPhone();
-  if (true){
-    alert("メニューを開くには左上の三本線をタップしてください");
-  }
-}  
+}
+isSmartPhone();
 </script>
 </body>
 </html>

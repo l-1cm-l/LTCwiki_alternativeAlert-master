@@ -5,6 +5,16 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
 <style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+img{
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
 .sliderArea {
 	max-width: auto;
 	margin: 0 ;
@@ -34,9 +44,15 @@
 }
 .slick-active {
 	opacity: 1;
+    width: 100%;
+	height: 75%;
+    object-fit: cover;
 }
 .slick-current {
 	opacity: 1;
+    width: 100%;
+	height: 75%;
+    object-fit: cover;
 }
 .thumb {
 	margin: 0;
@@ -61,12 +77,14 @@
 }
 .thumb .slick-slide:hover {
 	opacity: 0.7;
-    height: auto;
     position: relative;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
+    width: 100%;
+	height: 50%;
+    object-fit: cover;
 }
 
 .thumb .slick-track {
@@ -107,8 +125,9 @@ $(document).on('ready', function() {
   $('.thumb').slick({
       asNavFor:'.slider_thumb',
       focusOnSelect: true,
+      autoplay: false,
       slidesToShow:3,
-      slidesToScroll:1
+      slidesToScroll:1,
   });  
 });
 </script>
